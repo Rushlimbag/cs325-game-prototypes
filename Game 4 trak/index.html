@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Digital Assignment 4</title>
+    <script src="js/phaser.js"></script>
+    <script src="js/main.js"></script>
+
+<style>
+body
+{
+    color: #777;
+    font-family: "Avenir", Verdana, sans-serif;
+}
+#readme
+{
+    margin-top: 10px;
+}
+</style>
+
+</head>
+<body>
+<div id="game"></div>
+<div id="readme">
+<h2>Black Ice</h2>
+
+<ul>
+<li><strong>Originality:</strong>
+I decided to attempt simulating ice physics in a game where you have to dodge falling objects.
+</li>
+
+<li><strong>Technical Merit:</strong>
+I added "ice" physics (sliding when stopping), although I could not get sliding to work when changing direction/accelerating.
+</li>
+
+<li><strong>Prototype Postmortem:</strong>
+I learned about collsion detection and basic movement based physics.
+The hardest part of making this prototype was figuring out how to get collision for each ice spike.
+</li>
+
+<li><strong>Prototype Assets:</strong>
+Citations:
+<ul>
+<li>Background: <a href="https://www.shutterstock.com/video/clip-3356531-stock-footage-demolition-of-ice-wall-video-with-alpha-channel.html?src=search/FXhYk3PMhGmFWmnEAmhlUw:1:0/gg">Ice Background</a></li>
+<li>Player Sprite: <a href="https://github.com/photonstorm/phaser-examples/blob/master/examples/assets/games/starstruck/dude.png">Starstruck Phaser Example</a></li>
+<li>Music: Workers - Ice <a href="https://soundcloud.com/workers-beats">Soundcloud</a></li>
+</ul>
+</li>
+
+<li><strong>Prototype Closest Other Game:</strong>
+<li>Basic Movement: <a href="http://phaser.io/examples/v2/arcade-physics/platformer-tight">Adapted from "Platformer Tight" Phaser Example</a></li>
+<li>Sprite Creation: <a href="http://phaser.io/examples/v2/sprites/add-several-sprites">Adapted from "Add Several Sprites" Phaser Example</a></li>
+<li>Sprite Cloning: <a href="https://github.com/sansarip/cs325-game-prototypes/blob/master/Assignment3/js/main.js">Adapted from Sepehr Ansaripour's Assignment 3</a></li>
+</li>
+
+<li><strong>High Concept:</strong>
+Dodge falling ice whilst sliding around.
+</li>
+
+<li><strong>Theme:</strong>
+Ice
+</li>
+
+<li><strong>Mandated Variety:</strong>
+Keyboard, a lot of randomness, achiever, platformer
+</li>
+
+<li><strong>Prototype Goal:</strong>
+"Ice" physics and collision detection of multiple objects.
+</li>
+
+<li><strong>Player Experience Goals:</strong>
+A challenging fight against physics and randomness.
+</li>
+
+<li><strong>Gameplay:</strong>
+Left and right arrow keys move the player character, though the character will only slowly lose momentum when the player releases a key. Spacebar can be used to jump. The goal is to dodge as many falling ice spikes as possible (until ~200 fall). If the player is hit by a spike it is gameover.
+</li>
+
+<li><strong>Strategies:</strong>
+Qucikly strafing left and right will negate some of the momentum.
+</li>
+
+<li><strong>Story/Setting/Premise:</strong>
+You play as [PLACEHOLDER], an inquisitive adventurer braving the harsh climes of the arctic circle. While tracking what you believe to be a snow leopard
+, you find yourself deep inside an icy crevasse. You must try to survive as the ice around you melts, loosening deadly icicles from high above you.</li>
+
+<li><strong>Target Audience:</strong>
+People who enjoy difficult platformers like IWBTG.
+</li>
+
+<li><strong>Play Time:</strong>
+A few minutes.
+</li>
+
+</ul>
+
+</div>
+</body>
+</html>

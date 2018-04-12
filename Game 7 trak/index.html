@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Digital Assignment 7</title>
+	<script src="js/phaser.min.js"></script>
+	<!-- Boot.js must come first since it creates the BasicGame object
+	that stores all the states. -->
+	<script src="js/Boot.js"></script>
+	<script src="js/Preloader.js"></script>
+	<script src="js/Game.js"></script>
+	<!-- main.js must come last since it references the other ones. -->
+	<script src="js/main.js"></script>
+
+<style>
+body
+{
+    color: #777;
+    font-family: "Avenir", Verdana, sans-serif;
+}
+#readme
+{
+    margin-top: 10px;
+}
+</style>
+
+</head>
+<body>
+<div id="game"></div>
+<div id="readme">
+<h2>Freedive</h2>
+
+<ul>
+<li><strong>Originality:</strong>
+An attempt at a multi-level puzzle game.
+</li>
+
+<li><strong>Technical Merit:</strong>
+Tilemaps with embedded objects, moving tilemaps while moving player, game states, closures.
+</li>
+
+<li><strong>Prototype Postmortem:</strong>
+I learned how to create and import Tilemaps made in Tiled, manipulate tilemaps/layers within the game, and about implementing closures in JavaScript.
+Implementing and manipulating tilemaps was the most difficult aspect.
+</li>
+
+<li><strong>Prototype Assets:</strong>
+<ul>
+<li>Loading screen: <a href="https://www.xmple.com/wallpaper/black-blue-gradient-linear-800x600-c2-000000-00008b-a-270-f-14-image/">Blue Gradient</a></li>
+<li>Loading bar: edited from 'template-gamestate-functional'</li>
+<li>Button: Phaser example <a href="https://phaser.io/examples/v2/buttons/action-on-click">Action On Click</a></li>
+<li>Music: Daft Punk - Aerodynamic <a href="https://daftpunk.com/">Website</a></li>
+<li>Sprites/Tiles: <a href="https://opengameart.org/content/simple-broad-purpose-tileset">opengameart.org</a></li>
+</ul>
+</li>
+
+<li><strong>Prototype Closest Other Game:</strong>
+<li>Analog Assignment: Freedive</li>
+<li>I heavily referenced the following tutorial for help with tilemaps and Tiled: <a href="https://gamedevacademy.org/html5-phaser-tutorial-top-down-games-with-tiled/">Top-Down Games with Tiled</a></li>
+<li>I also referenced the following page for help with moving tilemaps: <a href="http://www.html5gamedevs.com/topic/13117-how-to-position-multiple-tilemaps/">Positioning Multiple Tilemaps</a></li>
+<li>I used Tiled to create my tilemaps: <a href="http://www.mapeditor.org/">Website</a></li>
+</li>
+
+<li><strong>High Concept:</strong>
+Escape from a magic tower.
+</li>
+
+<li><strong>Theme:</strong>
+</li>
+
+<li><strong>Mandated Variety:</strong>
+</li>
+
+<li><strong>Prototype Goal:</strong>
+Be able to manipulate multiple tilemaps on top of each other through player movement.
+</li>
+
+<li><strong>Player Experience Goals:</strong>
+A simple puzzle game with interesting mechanics.
+</li>
+
+<li><strong>Gameplay:</strong>
+Move your character with arrow keys (up, down, left, right). As you move, the floor below you will move in different directions corresponding to the keys you press. The player must reach the vent on each floor to dive to the floor below, but must also manipulate the floor below them so that they drop down into it and not into a locked room.
+</li>
+
+<li><strong>Strategies:</strong>
+The floors below are moved whenever arrow keys are pressed, even if the player does not move. Players can run against a wall to move the floors below without moving their character.
+</li>
+
+<li><strong>Story/Setting/Premise:</strong>
+You wake up trapped in the top floor of a 100 floor glass tower surrounded by the skeletons of other poor prisoners. You know you must escape but notice that whenever you move, the floors below also move in differing directions.
+</li>
+
+<li><strong>Target Audience:</strong>
+Puzzle game fans.
+</li>
+
+<li><strong>Play Time:</strong>
+A few minutes.
+</li>
+
+</ul>
+
+</div>
+</body>
+</html>

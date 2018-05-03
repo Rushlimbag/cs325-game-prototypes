@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Digital Assignment 9</title>
+	<script src="js/phaser.min.js"></script>
+	<!-- Boot.js must come first since it creates the BasicGame object
+	that stores all the states. -->
+	<script src="js/Boot.js"></script>
+	<script src="js/Preloader.js"></script>
+	<script src="js/Game.js"></script>
+	<!-- main.js must come last since it references the other ones. -->
+	<script src="js/main.js"></script>
+
+<style>
+body
+{
+    color: #777;
+    font-family: "Avenir", Verdana, sans-serif;
+}
+#readme
+{
+    margin-top: 10px;
+}
+</style>
+
+</head>
+<body>
+<div id="game"></div>
+<div id="readme">
+<h2>Golden Age v2.0</h2>
+
+<ul>
+<li><strong>Originality:</strong>
+
+</li>
+
+<li><strong>Technical Merit:</strong>
+Players can click anywhere in a particular cell on the map and change data/the board. There is also adjacency checks internally to keep players from placing flags in cells not adjacent to others of the same type and automatic turn switching.
+</li>
+
+<li><strong>Prototype Postmortem:</strong>
+Checking for adjacency was very difficult until i figured out I could just add a a 'boundary' to my array.
+</li>
+
+<li><strong>Prototype Assets:</strong>
+<ul>
+<li>Loading screen: <a href="https://www.xmple.com/wallpaper/black-blue-gradient-linear-800x600-c2-000000-00008b-a-270-f-14-image/">Blue Gradient</a></li>
+<li>Loading bar: edited from 'template-gamestate-functional'</li>
+<li>All other assets were created by me</li>
+</ul>
+</li>
+
+<li><strong>Prototype Closest Other Game:</strong>
+<li>Analog Assignment: Golden Age</li>
+<li>I referenced Ashley Crouch's Weird Checkers prototype for help creating my internal board structure: <a href="https://github.com/ashleycrouch/cs325-game-prototypes/tree/master/weirdcheckersiterate">Weird Checkers</a></li>
+</li>
+
+<li><strong>High Concept:</strong>
+2 players fight for control of territories in a war between kingdoms.
+</li>
+
+<li><strong>Theme:</strong>
+N/A
+</li>
+
+<li><strong>Mandated Variety:</strong>
+N/A
+</li>
+
+<li><strong>Prototype Goal:</strong>
+Get a working board with clickable cells to allow addition of rulesets and more sprites. Really just trying to get core functionality done.
+</li>
+
+<li><strong>Player Experience Goals:</strong>
+Players should experience a strategic game of war with simple rules and relatively quick playtime.
+</li>
+
+<li><strong>Gameplay:</strong>
+Each player first picks a spot for their capital: red must place theirs in the top row while blue must place it in the bottom. Players then take turns claiming territory adjacent to already claimed land. Eventually, I will implement unit types and a claim limit with mechanics for conquering enemy territories/capitals.
+But for now only basic functionality is implemented.
+</li>
+
+<li><strong>Strategies:</strong>
+
+</li>
+
+<li><strong>Story/Setting/Premise:</strong>
+The title is a reference to Berserk, hopefully you get the idea.
+</li>
+
+<li><strong>Target Audience:</strong>
+Strategy game fans.
+</li>
+
+<li><strong>Play Time:</strong>
+A few minutes.
+</li>
+
+</ul>
+
+</div>
+</body>
+</html>

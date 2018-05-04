@@ -36,11 +36,12 @@ body
 </li>
 
 <li><strong>Technical Merit:</strong>
-Players can click anywhere in a particular cell on the map and change data/the board. There is also adjacency checks internally to keep players from placing flags in cells not adjacent to others of the same type and automatic turn switching.
+Players can move individual units using hotkeys while the board keeps track of positions. Territory can be captured through RNG battles with some bonuses tabulated with units.
 </li>
 
 <li><strong>Prototype Postmortem:</strong>
-Checking for adjacency was very difficult until i figured out I could just add a a 'boundary' to my array.
+Couldn't figure out how to guarantee a commander was on the border before attacking so he can attack from anywhere. Didn't have time to add in rulesets for other units so they just add a passive bonus to atk/def rolls when in an invaded space.
+Redesigned party board to store actual sprites as opposed to just numbers. Added a pause after every move that is unpaused with a click to prevent constant polling when mouse button is down (would cause multiple moves to play at once before).
 </li>
 
 <li><strong>Prototype Assets:</strong>
@@ -52,7 +53,15 @@ Checking for adjacency was very difficult until i figured out I could just add a
 </li>
 
 <li><strong>Prototype Closest Other Game:</strong>
-<li>Analog Assignment: Golden Age</li>
+<li>Digital Assignment 8: Golden Age v1.0</li>
+<ul>
+<li>Redesigned party data structure</li>
+<li>Added unit assets and individual movement with hotkeys: King/Crown (k + click), Queen/Eye (q + click), Commander/Shield (c + click), Assassin/Hood(a + click)</li>
+<li>Added pause after every turn to buffer moves</li>
+<li>Added territory capture mechanics: commanders can attempt to capture enemy territories with a dice roll</li>
+<li>Added possible win state: kill both the king and queen in a successful battle(s) for territory</li>
+<li>Units can die, commanders will respawn after 3 turns</li>
+</ul>
 <li>I referenced Ashley Crouch's Weird Checkers prototype for help creating my internal board structure: <a href="https://github.com/ashleycrouch/cs325-game-prototypes/tree/master/weirdcheckersiterate">Weird Checkers</a></li>
 </li>
 
@@ -69,7 +78,7 @@ N/A
 </li>
 
 <li><strong>Prototype Goal:</strong>
-Get a working board with clickable cells to allow addition of rulesets and more sprites. Really just trying to get core functionality done.
+Get more rules and assets added to increase gameplay.
 </li>
 
 <li><strong>Player Experience Goals:</strong>
@@ -77,8 +86,19 @@ Players should experience a strategic game of war with simple rules and relative
 </li>
 
 <li><strong>Gameplay:</strong>
-Each player first picks a spot for their capital: red must place theirs in the top row while blue must place it in the bottom. Players then take turns claiming territory adjacent to already claimed land. Eventually, I will implement unit types and a claim limit with mechanics for conquering enemy territories/capitals.
-But for now only basic functionality is implemented.
+<li>**I RECOMMEND OPENING THE CONSOLE (F12) FOR HELPFUL MESSAGES DURING PLAY**</li>
+<li>**The game will pause itself after every turn and wait for the mouse to be clicked before a player can take their turn. Make sure you click once (whilst holding NO additional keys) before you make a move.**</li>
+Each player first picks a spot for their capital: red must place theirs in the top row while blue must place it in the bottom. Players then take turns claiming territory adjacent to already claimed land by simply clicking an empty square.
+Units can be moved by holding their associated hotkey and clicking the spot you wish to move them to (must be territory you hold for all units except commander/shield).
+<li>HOTKEYS:</li>
+<ul>
+<li>King/Crown (k + click)</li>
+<li>Queen/Eye (q + click)</li>
+<li>Commander/Shield (c + click)</li>
+<li>Assassin/Hood(a + click)</li>
+</ul>
+Commanders can attack any enemy territory adjacent to a held territory by moving to that square. A dice roll will occur with outcomes posted to console.
+When defending, any units in the square being attacked provide a +1 to the defense roll.
 </li>
 
 <li><strong>Strategies:</strong>

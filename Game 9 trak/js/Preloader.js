@@ -31,6 +31,14 @@ GameStates.makePreloader = function( game ) {
 			game.load.image('bluecapital','assets/bluecapital.png');
 			game.load.image('blueflag','assets/blueflag.png');
 			game.load.image('redflag','assets/redflag.png');
+			game.load.image('redking', 'assets/redking.png');
+			game.load.image('blueking', 'assets/blueking.png');
+			game.load.image('bluequeen', 'assets/bluequeen.png');
+			game.load.image('redqueen', 'assets/redqueen.png');
+			game.load.image('bluecmd', 'assets/bluecmd.png');
+			game.load.image('redcmd', 'assets/redcmd.png');
+			game.load.image('blueassn', 'assets/blueassn.png');
+			game.load.image('redassn', 'assets/redassn.png');
 
         },
     
